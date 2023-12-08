@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>be considerate</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--ナビゲーションメニュー-->
+    <!-- <link rel="stylesheet" type="text/css" href="css/5-1-25.css"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/tdk3iuz.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/7-1-47.css"> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--トップページボタン-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+</head>
+
+<body class="lowerpage">
+    
+  <!-- ヘッダー-->
+    <header class="header-bg3-02">
+      <a href="index.html" class="site-logo-small">
+        <img src="images/site-logo-small.png" alt="sitelogo">
+      </a>
+    
+      <!-- ハンバーガーメニュー -->
+      <div class="openbtn"><span></span><span></span><span></span></div>
+      <nav id="g-nav">
+         <div id="g-nav-list">
+                <ul>
+                     <li><a href="index.html">ホーム</a></li>
+                     <li><a href="index_profile.html">私について</a></li>
+                     <li><a href="index_portfolio_main.html">制作物</a></li>
+                     <li><a href="index_contact.html">お問い合わせ</a></li>
+               </ul>
+          </div>
+      </nav>
+      <div id="container">
+          <!-- <p>ぼかしを入れたいエリア</p>
+           /container -->
+      </div>
+
+    </header>
+    
+  <!-- メインビジュアル-->
+    <div class="main3-01">
+        <h1>Portfolio</h1>
+        <div class="test">
+           <span class="portfolio-parts">制作物</span>
+        </div>
+    </div>
+
+    <div class="scroll_up">
+
+        <div class="Banner1">
+          <h1>Banner</h1>
+          <div class="test">
+            <span class="portfolio-parts2">バナー</span>
+          </div>
+        </div>
+
+
+      <!-- 制作物02 Banner-->
+      <div class="Banner">
+          <img class="Banner-img" src="images/home-portfolio02.png" alt="制作物02">
+          <div class="Banner-mg">
+            <h3>02</h3>
+            <p class="pf1">アプリ版リリース広告</p>
+            <p class="pf2">制作範囲：デザイン</p> 
+            <p class="pf-mg1">
+              WEBデザインスクールの課題として、アプリ版リリース広告を制作（模写）しました。<br>
+              ２枚の画像を組み合わせた合成画像を違和感のないように制作できるように制作いたしました。
+            </p>
+          </div>
+          <div class="Banner-full">
+            <img class="Banner-full-img" src="images/pf-02.jpg" alt="制作物02">
+          </div>
+      </div>
+
+        <div class="portfolio-btn">
+          <a href="index_portfolio_main.html" class="pf-btn2">back</a>
+        </div>
+
+        <!-- トップページボタンー-->
+        <div id="pagetop"><a href="#" class="button_top">top</a></div>
+
+
+        <!-- フッター-->
+        <footer class="footer"> 
+          <div class="foot-wrap">
+              <div class="menu">
+
+                  <a href="index.html" class="footer-logo">
+                      <img src="images/site_logo.png" alt="sitelogo">
+                  </a>
+
+                  <ul class="foot">
+                    <li><a href="index_contact.html">お問い合わせ</a></li>
+                    <li><a href="index_portfolio_main.html">制作物</a></li>
+                    <li><a href="index_profile.html">私について</a></li>
+                    <li><a href="index.html">ホーム</a></li>
+                </ul>
+
+
+              </div>
+
+              <div class="sns-btn" >
+                  <div class="sns-logo">
+                    <a href="index_contact.html" class="sns-btn">
+                      <img src="images/mail-logo.png" alt="mail">
+                    </a>
+
+                    <a href="https://instagram.com/948350m?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" class="sns-btn">
+                      <img src="images/Instagram-logo.png" alt="Instagram">
+                    </a>
+                    
+                  </div>
+              </div>
+
+              <div class="copyright">
+                  <p>@be considerate</p>
+              </div>
+          </div>
+       </footer>
+
+      
+        <script>
+            
+          // <!--ハンバーガーメニュー　自作のJS-->
+            $(".openbtn").click(function () {//ボタンがクリックされたら
+                  $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+              $("#g-nav").fadeToggle('200');//
+            });
+
+            $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+                $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
+                $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去し
+                $("#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
+            });
+
+          // <!-- フェードインでページ全体を表示させるトップページアニメーションのデモ -->
+              $(function() {
+              $('body').fadeIn(1000); //1秒かけてフェードイン！
+              });
+
+          // <!-- フェードインでスクロール -->
+              $(window).scroll(function () {
+                var scrollAnimationElm = document.querySelectorAll('.scroll_up');
+                var scrollAnimationFunc = function () {
+                  for (var i = 0; i < scrollAnimationElm.length; i++) {
+                    var triggerMargin = 100;
+                    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+                      scrollAnimationElm[i].classList.add('on');
+                    }
+                  }
+                }
+                window.addEventListener('load', scrollAnimationFunc);
+                window.addEventListener('scroll', scrollAnimationFunc);
+              });
+
+          //  <!-- //トップページ -->
+
+                $(function() {
+                var pagetop = $('#pagetop');   
+                pagetop.hide();
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {  
+                        pagetop.fadeIn(); //100pxスクロールしたらフェードイン
+                    } else {
+                        pagetop.fadeOut();  //100pxスクロールしたらフェードアウト
+                    }
+                });
+                pagetop.click(function () {
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500); //トップへ戻る
+                    return false;
+                  });
+                });
+
+        </script>
+
+    </div>
+   
+
+</body>
+
+   

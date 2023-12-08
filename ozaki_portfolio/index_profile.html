@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>be considerate</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--ナビゲーションメニュー-->
+    <!-- <link rel="stylesheet" type="text/css" href="css/5-1-25.css"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/tdk3iuz.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--トップページボタンー-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+</head>
+
+
+<body class="lowerpage">
+    
+  <!-- ヘッダー-->
+    <header class="header-bg2">
+
+      <a href="index.html" class="site-logo-small">
+        <img src="images/site-logo-small.png" alt="sitelogo">
+      </a>
+
+    
+      <!-- ハンバーガーメニュー -->
+      <div class="openbtn"><span></span><span></span><span></span></div>
+      <nav id="g-nav">
+        <div id="g-nav-list">
+              <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="index_profile.html">私について</a></li>
+                <li><a href="index_portfolio_main.html">制作物</a></li>
+                <li><a href="index_contact.html">お問い合わせ</a></li>
+             </ul>
+         </div>
+      </nav>
+    </header>
+
+
+  <!-- メインビジュアル-->
+    <div class="main2">
+        <h1>Profile</h1>
+        <div class="test">
+          <span class="profile-parts-pro">私について</span>
+        </div>
+    </div>
+
+    <div class="scroll_up">
+      <!--======= 表示させたいものをここに記載 =======-->
+      <!-- プロフィール-->
+        <div class="profile-message1"> 
+          <div class="profile-my-img">
+            <img class="pro-my-img" src="images/pro-img.png" alt="プロフィール画像">
+          </div>
+          <ul> 
+              <li class="pro-mg0">
+                  <div class="pro-name">
+                    <span class="pro-name1">オザキ ミサト<br></span>
+                    <h2>尾﨑  美里</h2>
+                  </div>
+    
+                  <div class="pro-mg">
+                      <p class="pro-mg1">  
+                        1996年9月4日（27歳）<br>
+                        大阪府在住<br>
+                        大学卒業後、メーカーへ就職<br>
+                        趣味は、美術館巡り（地中美術館が一番好きです）<br>
+                        最近ハマっていること、占い
+                      </p> 
+    
+                      <h2>
+                        できること、使用できるツール
+                      </h2>
+                      <p class="pro-mg3">デザイン・コーティング<br>
+                      <div class="pro-mesage">
+                        <img src="images/logo-ai.png" alt="logo1">
+                        <img src="images/logo-ps.png" alt="logo2">
+                        <img src="images/logo-html.png" alt="logo3">
+                        <img src="images/logo-css.png" alt="logo4">
+                      </div>
+                         <div>
+                           <h2>
+                              ビジョン
+                           </h2>
+                            <p class="pro-mg5">
+                              お客様に寄り添ったデザインを一番に心がけられる<br>
+                              デザイナーを目指しています。<br>
+                              お客様とも自分自身とも向き合いながら、<br>
+                              ともに成長し続けていこうと思います。
+                            </p>
+                      </div>
+                  </div>
+              </li> 
+          </ul>
+      </div>
+  
+    </div>
+
+    
+    <!-- トップページボタンー-->
+    <div id="pagetop"><a href="#" class="button_top">top</a></div>
+    
+
+
+    <!-- フッター-->
+    <footer class="footer"> 
+      <div class="foot-wrap">
+          <div class="menu">
+
+              <a href="index.html" class="footer-logo">
+                  <img src="images/site_logo.png" alt="sitelogo">
+              </a>
+
+              <ul class="foot">
+                <li><a href="index_contact.html">お問い合わせ</a></li>
+                <li><a href="index_portfolio_main.html">制作物</a></li>
+                <li><a href="index_profile.html">私について</a></li>
+                <li><a href="index.html">ホーム</a></li>
+             </ul>
+
+
+          </div>
+
+          <div class="sns-btn" >
+              <div class="sns-logo">
+                <a href="index_contact.html" class="sns-btn">
+                  <img src="images/mail-logo.png" alt="mail">
+                </a>
+
+                <a href="https://instagram.com/948350m?igshid=OGQ5ZDc2ODk2ZA%3D%3D&utm_source=qr" class="sns-btn">
+                  <img src="images/Instagram-logo.png" alt="Instagram">
+                </a>
+                
+              </div>
+          </div>
+
+          <div class="copyright">
+              <p>@be considerate</p>
+          </div>
+      </div>
+   </footer>
+
+
+
+    <script>
+        
+      // <!--ハンバーガーメニュー　自作のJS-->
+        $(".openbtn").click(function () {//ボタンがクリックされたら
+              $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+          $("#g-nav").fadeToggle('200');//
+        });
+
+        $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+            $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
+            $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去し
+            $("#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
+        });
+
+      // <!-- フェードインでページ全体を表示させるトップページアニメーションのデモ -->
+          $(function() {
+          $('body').fadeIn(1000); //1秒かけてフェードイン！
+          });
+
+      // <!-- フェードインでスクロール -->
+          $(window).scroll(function () {
+            var scrollAnimationElm = document.querySelectorAll('.scroll_up');
+            var scrollAnimationFunc = function () {
+              for (var i = 0; i < scrollAnimationElm.length; i++) {
+                var triggerMargin = 100;
+                if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+                  scrollAnimationElm[i].classList.add('on');
+                }
+              }
+            }
+            window.addEventListener('load', scrollAnimationFunc);
+            window.addEventListener('scroll', scrollAnimationFunc);
+          });
+
+      //  <!-- //トップページ -->
+
+            $(function() {
+            var pagetop = $('#pagetop');   
+            pagetop.hide();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {  
+                    pagetop.fadeIn(); //100pxスクロールしたらフェードイン
+                } else {
+                    pagetop.fadeOut();  //100pxスクロールしたらフェードアウト
+                }
+            });
+            pagetop.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500); //トップへ戻る
+                return false;
+              });
+            });
+
+    </script>
+
+   
+
+   
+
+   
+
+</body>
+
+   
+
