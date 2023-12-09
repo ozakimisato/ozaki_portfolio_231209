@@ -1,0 +1,1771 @@
+@charset "uft-8";
+
+/* cssリセット */
+/*利用するタグによってこちらの内容は増やす*/
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #4c4c4c;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+/* img {
+    width: 70px;
+} */
+
+
+/*=======/*以下から、書き始め ===================================*/
+
+
+.lowerpage{
+    -webkit-animation: fadeIn 1.5s ease 0s 1 normal;
+    animation: fadeIn 1.5s ease 0s 1 normal;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0
+    }
+
+    100% {
+      opacity: 1
+    }
+  }
+
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0
+    }
+
+    100% {
+      opacity: 1
+    }
+}
+
+/* fadeUp */
+.wrap {
+    opacity: 0;
+    transition: 3s;
+}
+
+.open-wrap {
+    opacity: 1;
+}
+
+
+/*ヘッダー*/
+
+.header-bg{
+    background: url(../images/home-top.png)
+    no-repeat center center/cover;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 300px;
+}
+
+@media screen and (max-width: 767px) {
+    .header-bg{
+        margin-bottom: 0px;
+    }
+
+}
+
+
+.header-bg img{
+    width: 325px;
+    margin-top: 225px;
+    padding-bottom: 225px;
+    max-width:100%;
+}
+
+@media screen and (max-width: 767px) {
+    .header-bg img{
+        width: 270px;
+        margin-top: 230px;
+        padding-bottom: 300px;
+    }
+
+}
+
+
+
+/*各コンテンツ名*/
+
+h1{
+    font-size: 60px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    text-align:center;/*フォントを中央に配置*/
+    font-family: "shabby-chic", sans-serif; /*フォントの種類*/
+    font-weight: lighter;
+    
+}
+
+
+/*プロフィール*/
+.prof2{
+    margin-bottom: -270px;
+
+}
+
+@media screen and (max-width: 767px) {
+    .prof2{
+        margin-bottom: 0px;
+        margin-top: 150px;
+    }
+}
+
+
+.about-parts{
+    font-size: 13px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    display: block;
+    text-align:center;/*フォントを中央に配置*/
+    margin-top: 20px;
+}
+
+
+
+.about-message{
+    width: 100%;
+    display: block;
+    font-size: 14px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    text-align:center;/*フォントを中央に配置*/
+    line-height: 60px;
+    background: url(../images/home-prof.png)
+    no-repeat center center/contain;
+    padding: 300px 0;
+}
+
+@media screen and (max-width: 767px) {
+    .about-message{
+        padding: 50px 0;
+        background-image: none;
+
+    }
+}
+
+.about-bot{
+    max-width: 1000px;
+    margin: -250px auto 220px
+}
+
+
+.ab-btn {
+    border-radius:50%;
+	display: block;
+	width: 100px;
+    height:100px;
+	text-align: center;
+	text-decoration: none;
+    line-height: 100px;
+    font-size: 14px; /*フォントサイズ*/
+	color: #000333;
+	border: 1px solid #000333;
+	transition: .4s;
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    margin-left: auto;
+
+
+}
+
+@media screen and (max-width: 767px) {
+    .ab-btn{
+        margin: 300px auto 0px
+
+    }
+
+}
+
+.ab-btn:hover {
+	background: #000333;
+	color: #fff;
+}
+
+
+
+
+/*制作物　*/
+.portfolio-top{
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.portfolio-parts-top{
+    font-size: 13px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    display: block;/*フォントを中央に配置*/
+    text-align:center;/*フォントを中央に配置*/
+    margin: 30px 0;
+   
+}
+
+.portfoliolist-top{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pf-top:hover{ 
+	opacity:0.5;
+	transition:0.3s;
+}
+
+/* @media screen and (max-width: 767px) {
+    .portfoliolist-top{
+        display: block;
+    }
+
+} */
+  
+.pf-top{
+    margin: 0 auto;
+    padding: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .pf-top{
+        text-align: center;
+
+    }
+}
+
+  
+.pf-top li{
+   text-align: left;
+}
+  
+.pf-top img{
+    margin: 30px auto;
+    width: 400px;
+    border: 1px solid #999AAD;
+    max-width:100%;
+}
+
+/* 制作物　ボタン */
+.portfolio_btn-top{
+    max-width: 1000px;
+    margin: 50px auto 220px;
+}
+
+.por_btn-top {
+    border-radius:50%;
+	display: block;
+	width: 100px;
+    height:100px;
+	text-align: center;
+	text-decoration: none;
+    line-height: 100px;
+    font-size: 14px; /*フォントサイズ*/
+	color: #000333;
+	border: 1px solid #000333;
+	transition: .4s;
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    margin-left: auto;
+
+}
+
+@media screen and (max-width: 767px) {
+    .por_btn-top{
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+
+}
+
+.por_btn-top:hover {
+	background: #000333;
+	color: #fff;
+}
+
+
+
+
+/*お問い合わせ*/
+.contact-parts-top{
+    font-size: 13px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    display: block;
+    text-align:center;/*フォントを中央に配置*/
+    margin: 30px 0px 70px;
+}
+
+
+.contact-parts2{
+    font-size: 13px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family: sans-serif;
+    display: block;
+    text-align:center;/*フォントを中央に配置*/
+    margin-top: 25px;
+}
+
+.contact-bg-top{
+    background: url(../images/home-contact.png)
+    no-repeat center center/cover;
+    border-radius: 5px;
+    padding-top:100px;
+    margin-top: 200px;
+    padding-bottom: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+.con_btn-top {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	display: block;
+	border-radius: 12px;
+	overflow: hidden;
+	cursor: pointer;
+
+}
+
+.con_btn-top img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 100%;
+	display: block;
+	-webkit-transition: .4s ease-in-out;
+	transition: .4s ease-in-out;
+}
+ 
+.con_btn-top img:nth-of-type(1) {
+    opacity: 0;
+}
+
+.con_btn-top img:nth-of-type(2) {
+    opacity: 1;
+}
+
+/* hoverで1つ目の画像を出す　2つ目は透明にする */
+.con_btn-top:hover img:nth-of-type(1) {
+    opacity: 1;
+}
+
+.con_btn-top:hover img:nth-of-type(2) {
+    opacity: 0;
+}
+
+
+/* トップページボタン */
+html {
+	scroll-behavior: smooth;
+}
+
+.button_top {
+    /* ①ボタンの色と文字の色とサイズ */
+    background-color: #000333;
+	border: 1px solid #fff;
+    color: white;
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    font-size: 14px;
+
+    /* ②ボタンのサイズと角丸 */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+    /* ③次に作る上向きの三角と、TOPの文字の位置を揃えるためのcss */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* 色が変化する時間 */
+    transition: .5s;
+
+    /* ボタンを固定する位置 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+
+}
+
+
+.button_top::before {
+    /* ④絶対必要 */
+    content: "";
+    display: block;
+
+    /* ⑤三角のサイズ */
+    width: 10px;
+    height: 10px;
+
+    /* ⑥三角の線と回転角度 */
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+}
+
+/* .button_top::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(-45deg);
+
+} */
+
+/* （PC版）マウスをかざした時に変化する色の指定 */
+.button_top:hover {
+	background: #F2C04B;
+	color: #fff;
+}
+
+/* （スマホ版）かざした時に変化する色の指定 */
+@media screen and (max-width: 767px) {
+    .button_top:hover {
+        background: #000333;
+    }
+
+}
+
+
+/*=======プロフィールページ　以下から、書き始め===============**/
+
+/*ヘッダー*/
+.main2 {
+    background: url(../images/pro-top.png)
+    no-repeat center center/cover;
+}
+
+.site-logo-small img{
+    max-width: 114px;
+    height: 70px;
+    padding: 40px 40px
+} 
+
+
+/*メインビジュアル*/
+.main2 h1{
+    font-size: 60px; /*フォントサイズ*/
+    color: #fff; /*フォント色*/
+    font-family: "Shabby Chic Regular"; /*フォントの種類*/
+    text-align:center;/*フォントを中央に配置*/
+    padding-top: 200px;
+    font-family: "shabby-chic", sans-serif; /*フォントの種類*/
+    font-weight: lighter;
+}
+  
+@media screen and (max-width: 767px) {
+    .main2 h1{
+        padding-top: 210px;
+    }
+
+}
+
+
+.profile-parts-pro{
+    font-size: 13px; /*フォントサイズ*/
+    color: #fff; /*フォント色*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    display: block;/*フォントを中央に配置*/
+    text-align:center;/*フォントを中央に配置*/
+    margin-bottom: 180px;
+    padding-top: 20px;
+    padding-bottom: 200px;
+}
+
+@media screen and (max-width: 767px) {
+    .profile-parts-pro{
+        padding-bottom: 350px;
+    }
+
+}
+  
+  
+/*プロフィール*/
+.profile-message1{
+    display: flex;
+    align-items: flex-start;
+}
+
+.pro-my-img {
+    max-width:100%;
+    width: 300px;
+    border: solid 1px #000333; 
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+@media screen and (max-width: 767px) {
+    .profile-my-img{
+       text-align: center;
+    }
+}
+
+
+.profile-message1{
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+@media screen and (max-width: 767px) {
+    .profile-message1{
+        display: block;
+    }
+}
+
+
+  
+.profile-message1 li{
+    margin-left: 85px; /*(仮）の数値！！！！　文字と写真のマージンの幅*/
+}
+
+@media screen and (max-width: 767px) {
+    .profile-message1 li {
+        margin: 50px;
+
+    }
+}
+
+.pro-name1{
+    font-size: 13px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family: sans-serif;
+    padding-left: 15px;
+
+}
+  
+
+  
+.pro-mg1{
+    font-size: 16px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family: sans-serif;
+    line-height: 40px;
+    padding-left: 17px;
+    margin: 30px 0px 100px;
+
+}
+  
+  
+  
+/*プロフィール2*/
+.profile-message2{
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;  /*アイテムを真ん中にする*/
+}
+  
+
+@media screen and (max-width: 767px) {
+    .profile-message2 li{
+        margin: 50px;
+
+    }
+}
+
+
+
+  
+.pro-mg2 h2{
+    font-size: 20px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+    line-height: 50px;
+    border-left:2px solid #000333; /*線の設定*/
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+  
+  
+.pro-mg3{
+    font-size: 16px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family: sans-serif;
+    line-height: 40px;
+    padding-left: 17px;
+}
+  
+.pro-mesage{
+    width: 40px;
+    display: flex;
+    padding-bottom: 70px;
+    padding-left: 17px;
+}
+  
+.pro-mesage img{
+    padding: 5px;
+    max-width:100%;
+  
+}
+  
+  
+  
+h2{
+    font-size: 20px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family: sans-serif; /*フォントの種類*/
+    border-left:2px solid #000333; /*線の設定*/
+    line-height: 40px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+
+  
+}
+  
+  
+.pro-mg5{
+    font-size: 16px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family: sans-serif; /*フォントの種類*/
+    line-height: 40px;
+    padding-left: 17px;
+  
+}
+
+@media screen and (max-width: 767px) {
+    .pro-mg5 br {
+        display: none;
+    }
+}
+
+
+/*========= 制作物一覧ページ 以下、下記はじめ===============*/
+/*ヘッダー*/
+.main3{
+    background: url(../images/portfolio-top.png)
+    no-repeat center center/cover;
+}
+  
+
+/*メインビジュアル*/
+.main3 h1{
+    font-size: 60px; /*ォントサイズ*/
+    color: #fff; /*フォント色*/
+    font-family: "shabby-chic", sans-serif; /*フォントの種類*/
+    font-weight: lighter;
+    text-align:center;/*フォントを中央に配置*/
+    padding-top: 200px;
+}
+
+@media screen and (max-width: 767px) {
+    .main3 h1{
+        padding-top: 210px;
+    }
+
+}
+
+.portfolio-parts-por{
+    font-size: 13px; /*フォントサイズ*/
+    color: #fff; /*フォント色*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    display: block;/*フォントを中央に配置*/
+    text-align:center;/*フォントを中央に配置*/
+    margin-bottom: 180px;
+    padding-top: 20px;
+    padding-bottom: 200px;
+}
+
+@media screen and (max-width: 767px) {
+    .portfolio-parts-por{
+        padding-bottom: 350px;
+    }
+
+}
+
+
+
+/*制作物一覧*/
+
+.portfoliolist{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
+@media screen and (max-width: 767px) {
+    .portfoliolis {
+        display: block
+
+    }
+}
+
+
+.pf{
+  margin: 0 auto;
+  text-align : center ; 
+  max-width: 100%;
+
+}
+
+@media screen and (max-width: 767px) {
+    .pf {
+        padding: 30px;
+    }
+}
+
+
+.pf li{
+  text-align: left;
+  max-width: 300px;
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .pf li {
+        margin-bottom: 30px;
+    }
+}
+
+
+h3{
+  margin-top: -40px;
+  margin-bottom: -15px;
+  font-size: 100px; /*フォントサイズ*/
+  color: #F2C04B; /*フォント色*/
+  font-family: "shabby-chic", sans-serif; /*フォントの種類*/
+  font-weight: lighter;
+}
+
+
+.pf1{
+  font-size: 18px; /*フォントサイズ*/
+  font-weight: bold;
+  color: #000333; /*フォント色*/
+  line-height: 1.5;
+  font-family: sans-serif;
+
+}
+
+.pf2{
+  font-size: 14px; /*フォントサイズ*/
+  color: #000333; /*フォント色*/
+  padding-top:10px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+  padding-bottom: 10px; /*(仮）の数値！！！！文字と写真のマージンの幅*/
+  line-height: 1.5;
+  font-family: sans-serif;
+
+}
+
+
+
+.pf img{
+  margin: 0 auto;
+  border: 1px solid #999AAD;
+  max-width: 300px;
+}
+
+/*制作物画像のホバー*/
+.pf img:hover{ 
+	opacity:0.5;
+	transition:0.3s;
+}
+
+
+.pf-btn {
+  border-radius:50%;
+  display: block;
+  width: 80px;
+  height:80px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 80px;
+  font-size: 14px; /*フォントサイズ*/
+  color: #000333;
+  border: 1px solid #000333;
+  transition: .4s;
+  font-family:'Noto Serif JP', serif; /*フォントの種類*/
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+    .pf-btn{
+        margin: 0 auto;
+    }
+
+}
+
+.pf-btn:hover {
+    background: #000333;
+    color: #fff;
+}
+
+
+.pf-btn2{
+    border-radius:50%;
+    display: block;
+    width: 80px;
+    height:80px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 80px;
+    font-size: 14px; /*フォントサイズ*/
+    color: #000333;
+    border: 1px solid #000333;
+    transition: .4s;
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+  
+@media screen and (max-width: 767px) {
+    .pf-btn2{
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+  
+}
+  
+.pf-btn2:hover {
+  background: #000333;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+    .pf a{
+        margin: 0 auto;
+    }
+
+}
+
+
+
+/*========= 制作物01のページ 以下、下記はじめ===============*/
+/*ヘッダー*/
+.main3-01{
+    background: url(../images/portfolio-top.png)
+    no-repeat center center/cover;
+}
+
+.main3-01 h1{
+    font-size: 60px; /*フォントサイズ*/
+    color: #fff; /*フォント色*/
+    font-family: "shabby-chic", sans-serif; /*フォントの種類*/
+    font-weight: lighter;
+    text-align:center;/*フォントを中央に配置*/
+    padding-top: 200px;
+}
+
+@media screen and (max-width: 767px) {
+    .main3-01 h1{
+        padding-top: 210px;
+    }
+
+}
+
+.portfolio-parts{
+    font-size: 13px; /*フォントサイズ*/
+    color: #fff; /*フォント色*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    display: block;/*フォントを中央に配置*/
+    text-align:center;/*フォントを中央に配置*/
+    margin-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 200px;
+}
+
+@media screen and (max-width: 767px) {
+    .portfolio-parts{
+        padding-bottom: 350px;
+    }
+
+}
+
+
+.Banner1 h1{
+    font-size: 60px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family: "shabby-chic", sans-serif; /*フォントの種類*/
+    font-weight: lighter;
+    text-align:center;/*フォントを中央に配置*/
+
+}
+
+.portfolio-parts2{
+    font-size: 13px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    display: block;/*フォントを中央に配置*/
+    text-align:center;/*フォントを中央に配置*/
+    margin-bottom: 70px;
+    padding-top: 20px;
+
+}
+
+/*制作物ページ（01～06）　共通*/
+@media screen and (max-width: 767px) {
+    .Banner {
+        padding: 30px;
+    }
+}
+
+.Banner-mg{
+    margin: 0 auto;
+    text-align : left ; 
+    display: block;
+    max-width: 1000px;
+    
+}
+
+
+.Banner-img{
+    border: 1px solid #999AAD;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align : center ; 
+    display: block;
+
+}
+
+@media screen and (max-width: 767px) {
+    .Banner-img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+.pf-mg1{
+    margin-bottom: 70px;
+    font-size: 14px; /*フォントサイズ*/
+    color: #000333; /*フォント色*/
+    line-height: 1.5;
+    font-family: sans-serif;
+
+}
+
+.Banner-full {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.Banner img{
+    margin: 0 auto;
+    max-width:100%;
+    width: 1000px;
+}
+
+.Banner-full-img{
+    border: 1px solid #999AAD;
+
+}
+
+.Banner-full05 {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+
+
+.Banner-full05 img {
+    margin: 0 auto;
+    max-width:100%;
+
+}
+
+/* ======*お問い合わせページ  以下から下記はじめ ===============**/
+/*ヘッダー*/
+.main4 {
+    background: url(../images/con-top.png)
+    no-repeat center center/cover;
+}
+  
+  
+/*========= ボタンのためのCSS ===============*/
+.openbtn{
+    position:fixed;
+    z-index: 9999;/*ボタンを最前面に*/
+    top:60px;
+    right: 80px;
+    cursor: pointer;
+    /*ボタンのサイズ*/
+    width: 50px; 
+    height:50px;
+}
+      
+/*×に変化*/	
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 14px;
+    height: 1px;
+    background-color: #242020;
+    width: 100%;
+}
+  
+.openbtn span:nth-of-type(1) {
+      top:15px;	
+}
+  
+.openbtn span:nth-of-type(2) {
+      top:23px;
+}
+  
+.openbtn span:nth-of-type(3) {
+      top:31px;
+}
+  
+.openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-30deg); 
+    width: 100%;   /* ×のサイズY */
+}
+  
+.openbtn.active span:nth-of-type(2) {
+      opacity: 0;
+}
+  
+.openbtn.active span:nth-of-type(3){
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(30deg);
+    width: 100%;  /* ×のサイズX */
+}
+  
+  
+/*メインビジュアル*/
+  
+.main4 h1{
+      font-size: 60px; /*フォントサイズ*/
+      color: #fff; /*フォント色*/
+      font-family: "Shabby Chic Regular"; /*フォントの種類*/
+      text-align:center;/*フォントを中央に配置*/
+      padding-top: 200px;
+      font-family: "shabby-chic", sans-serif; /*フォントの種類*/
+      font-weight: lighter;
+}
+
+@media screen and (max-width: 767px) {
+    .main4 h1{
+        padding-top: 210px;
+    }
+
+}
+  
+.contact-parts{
+      font-size: 13px; /*フォントサイズ*/
+      color: #fff; /*フォント色*/
+      font-family:'Noto Serif JP', serif; /*フォントの種類*/
+      display: block;/*フォントを中央に配置*/
+      text-align:center;/*フォントを中央に配置*/
+      margin-bottom: 180px;
+      padding-top: 20px;
+      padding-bottom: 200px;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-parts{
+        padding-bottom: 350px;
+        margin-bottom: 130px;
+
+    }
+
+}
+  
+   
+/*お問い合わせフォーム*/
+.contact-form{
+    color: #000333; /*フォント色*/
+    text-align:center;/*フォントを中央に配置*/
+    font-size: 14px; /*フォントサイズ*/
+    line-height: 35px;
+    font-family: sans-serif;
+    
+}
+
+@media screen and (max-width: 767px) {
+    .contact-form {
+        font-size: 12px; /*フォントサイズ*/
+    }
+    
+}
+
+.con-fm1{
+    font-size: 22px; /*フォントサイズ*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+}
+  
+  
+/*フォーム*/
+.Form {
+    max-width: 1000px;
+    margin:0 auto;
+    margin-top: 50px;
+}
+  
+  
+@media screen and (max-width: 767px) {
+    .Form {
+        margin: 40px;
+    }
+    
+}
+  
+.Form-Item {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 100%;
+}
+  
+  
+@media screen and (max-width: 767px) {
+    .Form-Item {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+  
+  
+.Form-Item-Label {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+  
+  
+  
+@media screen and (max-width: 767px) {
+    .Form-Item-Label {
+        max-width: inherit;
+        font-size: 15px;
+    }
+}
+  
+.Form-Item-Label.isMsg {
+    margin-bottom: 10px;
+    font-family: sans-serif;
+
+}
+  
+@media screen and (max-width: 767px) {
+    .Form-Item-Label.isMsg {
+        margin-top: 0;
+    }
+}
+  
+.Form-Item-Label-Required {
+      border-radius: 5px;
+      /* padding-bottom: 8px; */
+      /* width: 50px; */
+      display: inline-block;
+      text-align: center;
+      /* /*background: #5bc8ac; */
+      color: #fff;
+      font-size: 14px;
+}
+  
+@media screen and (max-width: 767px) {
+    .Form-Item-Label-Required {
+        border-radius: 4px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        font-size: 10px;
+    }
+}
+  
+.Form-Item-Input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    height: 50px;  /* 入力欄のサイズ */
+    flex: 1;
+    width: 100%;
+    background: #D9D9E0;
+    font-size: 18px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding: 0 0 0 20px;
+
+}
+  
+@media screen and (max-width: 767px) {
+    .Form-Item-Input {
+      margin-left: 0;
+       height: 40px;
+      font-size: 15px;
+    }
+}
+  
+.Form-Item-Textarea {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    height: 216px;
+    flex: 1;
+    width: 100%;
+    background: #D9D9E0;
+    font-size: 18px;
+}
+  
+@media screen and (max-width: 767px) {
+   .Form-Item-Textarea {
+        margin-left: 0;
+        height: 200px;
+        flex: inherit;
+        font-size: 15px;
+    }
+}
+  
+.Form-Btn {
+    border-radius:50%;
+    width: 100px;
+    height:100px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    color: #000333; 
+    border: 1px solid #000333; 
+    transition: .4s;
+    font-size: 14px; /*フォントサイズ*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+
+}
+  
+  
+.Form-Btn:hover {
+    background: #000333;
+    color: #fff;
+}
+  
+@media screen and (max-width: 767px) {
+    .Form-Btn {
+        margin-top: 24px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 16px;
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: #eee;
+        color: #000333;
+
+    }
+}
+
+/*   モーダルウィンドウ  */
+.layer {
+    background: rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s linear, visibility 1s linear, z-index 1s linear;
+}
+  
+  
+  
+.layer.is-open {
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+}
+  
+.layer.is-open .modal{
+    opacity: 1;
+    visibility: visible;
+}
+  
+.modal__button-wrap {
+    position: absolute;
+    right: 10px;
+    top: -28px;
+    display: inline-flex;
+}
+  
+  
+.close-button {
+    position: relative;
+    width: 39px;
+    height: 39px;
+    background: #000333;
+    border-radius: 50%;
+    padding: 0;
+    border: transparent;
+    cursor: pointer;
+}
+  
+.close-button span {
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    left: calc(50% - 12px);
+    top: 50%;
+    border-radius: 20px;
+}
+
+.close-button span:nth-child(1) {
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+  
+.close-button span:nth-child(2) {
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+  
+  
+  
+.modal {
+    position: relative;
+    margin: 0 auto;
+    width: 700px;
+    max-width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition:  visibility .7s linear, opacity .7s linear;
+}
+
+@media screen and (max-width: 767px) {
+    .modal {
+        width: 330px;
+    }
+}
+
+
+  
+.modal__inner {
+    margin-top: 125px;
+    margin-bottom: 125px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background:#fff ;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: block;
+    padding: 100px 8px 100px;
+    height: auto;
+    text-align: center;
+
+}
+
+
+
+.modal__content {
+    padding-top: 15px;
+    padding-bottom: 23px;
+    line-height: 30px;
+    font-family: "游明朝", YuMincho; /*フォントの種類*/
+    color: #000333;
+    font-family: sans-serif;
+    margin: 40px;
+    max-width: 700px;
+    margin:0 auto;
+    
+}
+
+
+/* @media screen and (max-width: 767px) {
+    .modal__contents{
+        max-width: 700px;
+        margin:0 auto;
+    }
+} */
+
+
+.modal__content2{
+    font-size:22px;
+    color: #000333;
+    
+}
+  
+  
+.modal__button-area {
+    max-width: 843px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 17px;
+    padding-top: 15px;
+}
+  
+
+
+
+  
+/*=========（共通）ハンバーガーメニュー=========*/
+/*========= ぼかしのためのCSS ===============*/
+.mainblur{
+    filter: blur(50px);
+}
+  
+/*========= ナビゲーションのためのCSS ===============*/
+#g-nav{
+    /*position:fixed;にし、z-indexの数値を小さくして最背面へ*/
+    position:fixed;
+    z-index: 1000;
+    /* opacity: 0;はじめは透過0 */
+    /*ナビの位置と形状*/
+    top:0;
+    width:100%;
+    height: 100vh;/*ナビの高さ*/
+    background:#000333bc;/*背景を少し透過させる*/
+    /*動き*/
+    /* transition: all 0.3s; */
+    display: none;
+}
+  
+  /*アクティブクラスがついたら透過なしにして最前面へ*/
+#g-nav.panelactive{
+      opacity: 1;
+      z-index:999;
+}
+  
+/*ナビゲーションの縦スクロール*/
+#g-nav.panelactive #g-nav-list{
+      /*ナビの数が増えた場合縦スクロール*/
+      /* position: fixed; */
+      z-index: 999; 
+      width: 100%;
+      height: 100vh;/*表示する高さ（全体）*/
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+}
+  
+/*ナビゲーション*/
+#g-nav ul {
+      /* display: none;はじめは非表示 */
+      /*ナビゲーション天地中央揃え*/
+      position: absolute;
+      z-index: 999;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+}
+
+#g-nav-list ul :hover{
+    color: #696A87;
+
+}
+
+
+#g-nav.panelactive ul {
+    display: block;
+}
+  
+  
+  /*リストのレイアウト設定*/
+#g-nav li{
+    list-style: none;
+    text-align: center; 
+}
+  
+#g-nav li a{
+    color: #fff;
+    text-decoration: none;
+    padding:20px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+}
+
+
+
+
+
+
+
+/*=========（共通）フッター=========*/
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    margin:30px ;
+
+}
+
+@media screen and (max-width: 767px) {
+    .menu{
+        justify-content: center;
+    }
+}
+
+.foot-wrap{
+    width: 100%;
+    background-color: #000333; /* 背景の色　#00CCCC */
+    margin-top: 150px;
+    display: inline-block;
+
+}
+
+.menu ul{
+    display: flex;
+}
+
+
+/* @media screen and (max-width: 767px) {
+    .foot {
+        display: flex;
+        justify-content: space-between;
+
+    }
+}  */
+
+
+.foot li{
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    color: #fff; /*フォント色*/
+    writing-mode: vertical-lr;
+    padding: 30px;
+}
+
+.foot li:hover{
+    color: #696A87;
+}
+
+.copyright p{
+    color: #fff; /*フォント色*/
+    font-family:'Noto Serif JP', serif; /*フォントの種類*/
+    text-align: center;
+    margin-bottom: 70px;
+    font-size: 10px;
+
+}
+
+
+.sns-btn {
+    margin: 0px 0px 100px;
+    padding: 25px;
+
+}
+
+.sns-logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+    .sns-logo{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.sns-btn li{
+    padding: 20px;
+}
+
+.sns-btn img{
+    width: 33px; 
+
+}
+
+@media screen and (max-width: 767px) {
+    .footer-logo img{
+        display: none;
+    }
+
+}
+
+.footer-logo img{
+    width: 200px;
+    margin: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .footer-logo img{
+        display: none;
+    }
+
+}
+
+
+
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 20000;
+	text-align:center;
+	color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    z-index: 999;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	width: 100%;
+}
+
+/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+#splash_text svg{
+    height: 2px;
+}
+
+/*割れる画面のアニメーション*/
+.loader_cover {
+    width: 100%;
+    height: 50%;
+    background-color: #000333;
+    transition: all .2s cubic-bezier(.04, .435, .315, .9);
+    transform: scaleY(1);
+}
+/*上の画面*/
+.loader_cover-up {
+    transform-origin: center top;
+}
+
+/*下の画面*/
+.loader_cover-down {
+    position: absolute;
+    bottom: 0;
+    transform-origin: center bottom;
+}
+/*クラス名がついたらY軸方向に0*/
+.coveranime {
+    transform: scaleY(0);
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+.splashbg{
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+    display: block;
+    content: "";
+    position:fixed;
+	z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+	left: 0;
+    transform: scaleY(0);
+    background-color: #000333; /*フォント色*/;/*伸びる背景色の設定*/
+	animation-name:PageAnime;
+	animation-duration:1.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+
+}
+
+@keyframes PageAnime{
+	0% {
+		transform-origin:bottom;
+		transform:scaleY(0);
+	}
+	50% {
+		transform-origin:bottom;
+		transform:scaleY(1);
+	}
+	50.001% {
+		transform-origin:top;
+	}
+	100% {
+		transform-origin:top;
+		transform:scaleY(0);
+	}
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+
+/* #container{
+	opacity: 0;/*はじめは透過0に*/
+/* } */ 
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+  }
+}
+
+/* （トップページ以外）スクロールでフェードイン */
+
+.scroll_up {
+    transition: 2s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.scroll_up.on {
+    transform: translateY(0);
+    opacity: 1.0;
+}
+  
+
+/* トップページのスクロールでフェードイン */
+.fadein {
+    opacity: 0;
+    transform: translate(0,0);
+    transition: all 2s;
+
+   &.fadein-bottom{
+      transform: translate(0,30px);
+    }
+  
+    &.scrollin{
+        opacity: 1 !important;
+        transform: translate(0, 0) !important;
+    }
+
+}
