@@ -274,7 +274,7 @@ h1{
 .pf-top img{
     margin: 30px auto;
     width: 400px;
-    border: 1px solid #999AAD;
+    /* border: 1px solid #999AAD; */
     max-width:100%;
 }
 
@@ -810,12 +810,12 @@ h3{
 .pf-btn {
   border-radius:50%;
   display: block;
-  width: 80px;
-  height:80px;
+  width: 60px;
+  height:60px;
   text-align: center;
   text-decoration: none;
-  line-height: 80px;
-  font-size: 14px; /*フォントサイズ*/
+  line-height: 60px;
+  font-size: 12px; /*フォントサイズ*/
   color: #000333;
   border: 1px solid #000333;
   transition: .4s;
