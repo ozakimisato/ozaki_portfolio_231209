@@ -227,9 +227,19 @@ h1{
 .portfoliolist-top{
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
+
+@media screen and (max-width: 767px) {
+    .portfoliolist-top{
+        padding: 30px;
+
+    }
+}
+
+
+
 
 .pf-top:hover{ 
 	opacity:0.5;
@@ -244,14 +254,13 @@ h1{
 } */
   
 .pf-top{
-    margin: 0 auto;
-    padding: 30px;
+    margin: 30px auto 30px;
 }
 
 @media screen and (max-width: 767px) {
     .pf-top{
         text-align: center;
-
+        /* padding: 30px; */
     }
 }
 
