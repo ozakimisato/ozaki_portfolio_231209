@@ -244,15 +244,18 @@ h1{
 } */
   
 .pf-top{
-    margin: 30px auto 30px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
 @media screen and (max-width: 767px) {
     .pf-top{
         text-align: center;
-        padding: 30px;
+
     }
 }
+
+
 
   
 .pf-top li{
