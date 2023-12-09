@@ -6,11 +6,12 @@
     <title>be considerate</title>
     <link rel="stylesheet" href="css/style.css">
 
+   
     <!--ナビゲーションメニュー-->
     <!-- <link rel="stylesheet" type="text/css" href="css/5-1-25.css"> -->
     <link rel="stylesheet" href="https://use.typekit.net/tdk3iuz.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <!--トップページボタン-->
+   <!--トップページボタンー-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
 </head>
 
@@ -49,40 +50,59 @@
     </div>
     
     
-  <div class="scroll_up">
-      <div class="Banner1">
-        <h1>LandingPage</h1>
-        <div class="test">
-          <span class="portfolio-parts2">ランディングページ</span>
-        </div>
-      </div>
-      
-      <!-- 制作物06 Banner-->
-        <div class="Banner">
-           <img class="Banner-img" src="images/home-portfolio06.png" alt="制作物06">
-            <div class="Banner-mg">
-                <h3>06</h3>
-                <p class="pf1">ランディングページ</p>
-                <p class="pf2">制作範囲 : デザイン<br>
-                  テーマ : お店の雰囲気、人が感じられるサイト <br>
-                  ターゲット : 女性向け（20～50代）
-                </p> 
-                <p class="pf-mg1">
-                  WEBデザインスクールの課題として、美容院のランディングページの制作しました。<br>
-                  ピンクカラーをメインに、柔らかく女性らしさが感じられるデザインを心がけました。
-                </p>
-             </div> 
-              <div class="Banner-full">
-                <img class="Banner-full-img" src="images/pf-06.png" alt="制作物06">
-              </div>
-         </div>
+
+   <div class="scroll-space">
+         <!-- 下からフェードイン-->
+       <div class="fadein fadein-bottom">
+          <div class="Banner1">
+            <h1>LandingPage</h1>
+            <div class="test">
+              <span class="portfolio-parts2">ランディングページ</span>
+            </div>
+          </div>
+        </div>  
+   </div>  
+   
+  
+   <div class="scroll-space">
+         <!-- 下からフェードイン-->
+       <div class="fadein fadein-bottom">
+             <!-- 制作物06 Banner-->
+            <div class="Banner">
+              <img class="Banner-img" src="images/home-portfolio06.png" alt="制作物06">
+                <div class="Banner-mg">
+                    <h3>06</h3>
+                    <p class="pf1">ランディングページ</p>
+                    <p class="pf2">制作範囲 : デザイン<br>
+                      テーマ : お店の雰囲気、人が感じられるサイト <br>
+                      ターゲット : 女性向け（20～50代）
+                    </p> 
+                    <p class="pf-mg1">
+                      WEBデザインスクールの課題として、美容院のランディングページの制作しました。<br>
+                      ピンクカラーをメインに、柔らかく女性らしさが感じられるデザインを心がけました。
+                    </p>
+                </div> 
+
+                <div class="scroll-space">
+                    <!-- 下からフェードイン-->
+                     <div class="fadein fadein-bottom">
+                        <div class="Banner-full">
+                          <img class="Banner-full-img" src="images/pf-06.png" alt="制作物06">
+                        </div>
+                     </div>
+                 </div>  
+
+            </div>
+         </div>  
+    </div>  
 
         <div class="portfolio-btn">
           <a href="index_portfolio_main.html" class="pf-btn2">back</a>
         </div>
+
     
         <!-- トップページボタンー-->
-        <div id="pagetop"><a href="#" class="button_top">top</a></div>      
+        <div id="pagetop"><a href="#" class="button_top">top</a></div>   
         
         
         <!-- フッター-->
@@ -121,7 +141,7 @@
                   <p>@be considerate</p>
               </div>
            </div>
-       </footer>
+         </footer>
 
 
 
@@ -141,48 +161,62 @@
               $("#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
           });
 
-        // <!-- フェードインでページ全体を表示させるトップページアニメーションのデモ -->
+        // // <!-- フェードインでページ全体を表示させるトップページアニメーションのデモ -->
+        //     $(function() {
+        //     $('body').fadeIn(1000); //1秒かけてフェードイン！
+        //     });
+
+        // // <!-- フェードインでスクロール -->
+        //     $(window).scroll(function () {
+        //       var scrollAnimationElm = document.querySelectorAll('.scroll_up');
+        //       var scrollAnimationFunc = function () {
+        //         for (var i = 0; i < scrollAnimationElm.length; i++) {
+        //           var triggerMargin = 100;
+        //           if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+        //             scrollAnimationElm[i].classList.add('on');
+        //           }
+        //         }
+        //       }
+        //       window.addEventListener('load', scrollAnimationFunc);
+        //       window.addEventListener('scroll', scrollAnimationFunc);
+        //     });
+
+
+        // / <!--フェードイン->
+        $(window).scroll(function (){
+            $('.fadein').each(function(){
+                var elemPos = $(this).offset().top,
+                scroll = $(window).scrollTop(),
+                windowHeight = $(window).height();
+
+                    if (scroll > elemPos - windowHeight + 150){
+                        $(this).addClass('scrollin');
+                    }
+            });
+        });
+
+           //  <!-- //トップページ -->
+
             $(function() {
-            $('body').fadeIn(1000); //1秒かけてフェードイン！
-            });
-
-        // <!-- フェードインでスクロール -->
+            var pagetop = $('#pagetop');   
+            pagetop.hide();
             $(window).scroll(function () {
-              var scrollAnimationElm = document.querySelectorAll('.scroll_up');
-              var scrollAnimationFunc = function () {
-                for (var i = 0; i < scrollAnimationElm.length; i++) {
-                  var triggerMargin = 100;
-                  if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
-                    scrollAnimationElm[i].classList.add('on');
-                  }
+                if ($(this).scrollTop() > 500) {  
+                    pagetop.fadeIn(); //100pxスクロールしたらフェードイン
+                } else {
+                    pagetop.fadeOut();  //100pxスクロールしたらフェードアウト
                 }
-              }
-              window.addEventListener('load', scrollAnimationFunc);
-              window.addEventListener('scroll', scrollAnimationFunc);
             });
-
-        //  <!-- //トップページ -->
-
-              $(function() {
-              var pagetop = $('#pagetop');   
-              pagetop.hide();
-              $(window).scroll(function () {
-                  if ($(this).scrollTop() > 100) {  
-                      pagetop.fadeIn(); //100pxスクロールしたらフェードイン
-                  } else {
-                      pagetop.fadeOut();  //100pxスクロールしたらフェードアウト
-                  }
+            pagetop.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500); //トップへ戻る
+                return false;
               });
-              pagetop.click(function () {
-                  $('body,html').animate({
-                      scrollTop: 0
-                  }, 500); //トップへ戻る
-                  return false;
-                });
-              });
+            });
 
       </script>
-   </div>
+
 
    
 

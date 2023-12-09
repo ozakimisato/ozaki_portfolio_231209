@@ -253,7 +253,6 @@ h1{
         text-align: center;
 
     }
-
 }
 
   
@@ -261,9 +260,8 @@ h1{
    text-align: left;
 }
   
-
 .pf-top img{
-    margin: 0 auto;
+    margin: 30px auto;
     width: 400px;
     border: 1px solid #999AAD;
     max-width:100%;
@@ -352,6 +350,7 @@ h1{
 	cursor: pointer;
 
 }
+
 .con_btn-top img {
 	position: absolute;
 	top: 50%;
@@ -433,7 +432,7 @@ html {
     transform: rotate(-45deg);
 }
 
-.button_top::before {
+/* .button_top::before {
     content: "";
     display: block;
     width: 10px;
@@ -442,16 +441,21 @@ html {
     border-right: 2px solid white;
     transform: rotate(-45deg);
 
-}
+} */
 
-/* マウスをかざした時に変化する色の指定 */
+/* （PC版）マウスをかざした時に変化する色の指定 */
 .button_top:hover {
 	background: #F2C04B;
 	color: #fff;
 }
 
+/* （スマホ版）かざした時に変化する色の指定 */
+@media screen and (max-width: 767px) {
+    .button_top:hover {
+        background: #000333;
+    }
 
-
+}
 
 
 /*=======プロフィールページ　以下から、書き始め===============**/
@@ -777,6 +781,8 @@ h3{
 
 }
 
+
+
 .pf img{
   margin: 0 auto;
   border: 1px solid #999AAD;
@@ -834,14 +840,15 @@ h3{
     transition: .4s;
     font-family:'Noto Serif JP', serif; /*フォントの種類*/
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 100px;
     margin-bottom: 50px;
 }
   
 @media screen and (max-width: 767px) {
-      .pf-btn2{
-          margin: 0 auto;
-      }
+    .pf-btn2{
+        margin: 0 auto;
+        margin-top: 50px;
+    }
   
 }
   
@@ -1123,7 +1130,7 @@ h3{
 .Form {
     max-width: 1000px;
     margin:0 auto;
-    margin-top: 100px;
+    margin-top: 50px;
 }
   
   
@@ -1522,7 +1529,7 @@ h3{
 .foot-wrap{
     width: 100%;
     background-color: #000333; /* 背景の色　#00CCCC */
-    margin-top: 300px;
+    margin-top: 150px;
     display: inline-block;
 
 }
@@ -1541,7 +1548,6 @@ h3{
 }  */
 
 
-
 .foot li{
     font-family:'Noto Serif JP', serif; /*フォントの種類*/
     color: #fff; /*フォント色*/
@@ -1558,8 +1564,10 @@ h3{
     font-family:'Noto Serif JP', serif; /*フォントの種類*/
     text-align: center;
     margin-bottom: 70px;
+    font-size: 10px;
 
 }
+
 
 .sns-btn {
     margin: 0px 0px 100px;

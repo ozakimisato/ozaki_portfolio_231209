@@ -49,37 +49,46 @@
         </div>
     </div>
 
-  <div class="scroll_up">
+  <!-- <div class="scroll_up"> -->
 
-        <div class="Banner1">
-          <h1>Banner</h1>
-          <div class="test">
-            <span class="portfolio-parts2">バナー</span>
-          </div>
-        </div>
-
-        <!-- 制作物01 Banner-->
-          <div class="Banner">
-            <img class="Banner-img" src="images/home-portfolio01.png" alt="制作物01">
-            <div class="Banner-mg">
-              <h3>01</h3>
-              <p class="pf1">WEB広告用バナー</p>
-              <p class="pf2">制作範囲：デザイン</p> 
-              <p class="pf-mg1">
-                WEBデザインスクールの課題として、WEB広告用のバナーを制作（模写）しました。<br>
-                背景に複数枚のレイヤーを重ねSPRINGSALEの文字がさりげなく主張されるように制作いたしました。
-              </p>
+  <div class="scroll-space">
+        <!-- 下からフェードイン-->
+       <div class="fadein fadein-bottom">
+            <div class="Banner1">
+              <h1>Banner</h1>
+              <div class="test">
+                <span class="portfolio-parts2">バナー</span>
+              </div>
             </div>
-            <div class="Banner-full">
-              <img class="Banner-full-img" src="images/pf-01.jpg" alt="制作物01">
-            </div>   
 
-          </div>
+            <!-- 制作物01 Banner-->
+              <div class="Banner">
+                <img class="Banner-img" src="images/home-portfolio01.png" alt="制作物01">
+                <div class="Banner-mg">
+                  <h3>01</h3>
+                  <p class="pf1">WEB広告用バナー</p>
+                  <p class="pf2">制作範囲：デザイン</p> 
+                  <p class="pf-mg1">
+                    WEBデザインスクールの課題として、WEB広告用のバナーを制作（模写）しました。<br>
+                    背景に複数枚のレイヤーを重ねSPRINGSALEの文字がさりげなく主張されるように制作いたしました。
+                  </p>
+                </div>
+                <div class="scroll-space">
+                    <!-- 下からフェードイン-->
+                     <div class="fadein fadein-bottom">
+                        <div class="Banner-full">
+                          <img class="Banner-full-img" src="images/pf-01.jpg" alt="制作物01">
+                        </div>  
+                    </div>
+                </div>  
 
-      <div class="portfolio-btn">
-          <a href="index_portfolio_main.html" class="pf-btn2">back</a>
-      </div>
+              </div>
 
+              <div class="portfolio-btn">
+                  <a href="index_portfolio_main.html" class="pf-btn2">back</a>
+              </div>
+         </div>
+  </div>
       
         <!-- トップページボタンー-->
         <div id="pagetop"><a href="#" class="button_top">top</a></div>
@@ -137,37 +146,52 @@
                 $("#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
             });
 
-          // <!-- フェードインでページ全体を表示させるトップページアニメーションのデモ -->
-              $(function() {
-              $('body').fadeIn(1000); //1秒かけてフェードイン！
-              });
+          // // <!-- フェードインでページ全体を表示させるトップページアニメーションのデモ -->
+          //     $(function() {
+          //     $('body').fadeIn(1000); //1秒かけてフェードイン！
+          //     });
 
-          // <!-- フェードインでスクロール -->
-              $(window).scroll(function () {
-                var scrollAnimationElm = document.querySelectorAll('.scroll_up');
-                var scrollAnimationFunc = function () {
-                  for (var i = 0; i < scrollAnimationElm.length; i++) {
-                    var triggerMargin = 100;
-                    if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
-                      scrollAnimationElm[i].classList.add('on');
-                    }
-                  }
-                }
-                window.addEventListener('load', scrollAnimationFunc);
-                window.addEventListener('scroll', scrollAnimationFunc);
-              });
+          // // <!-- フェードインでスクロール -->
+          //     $(window).scroll(function () {
+          //       var scrollAnimationElm = document.querySelectorAll('.scroll_up');
+          //       var scrollAnimationFunc = function () {
+          //         for (var i = 0; i < scrollAnimationElm.length; i++) {
+          //           var triggerMargin = 100;
+          //           if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+          //             scrollAnimationElm[i].classList.add('on');
+          //           }
+          //         }
+          //       }
+          //       window.addEventListener('load', scrollAnimationFunc);
+          //       window.addEventListener('scroll', scrollAnimationFunc);
+          //     });
+
+
+           // / <!--フェードイン->
+            $(window).scroll(function (){
+                $('.fadein').each(function(){
+                    var elemPos = $(this).offset().top,
+                    scroll = $(window).scrollTop(),
+                    windowHeight = $(window).height();
+
+                        if (scroll > elemPos - windowHeight + 150){
+                            $(this).addClass('scrollin');
+                        }
+                 });
+            });
+
 
             
-          //  <!-- //トップページ -->
+            //  <!-- //トップページ -->
 
                 $(function() {
                 var pagetop = $('#pagetop');   
                 pagetop.hide();
                 $(window).scroll(function () {
-                    if ($(this).scrollTop() > 100) {  
-                        pagetop.fadeIn(); //100pxスクロールしたらフェードイン
+                    if ($(this).scrollTop() > 500) {  
+                        pagetop.fadeIn(); //500pxスクロールしたらフェードイン
                     } else {
-                        pagetop.fadeOut();  //100pxスクロールしたらフェードアウト
+                        pagetop.fadeOut();  //500pxスクロールしたらフェードアウト
                     }
                 });
                 pagetop.click(function () {
@@ -179,7 +203,7 @@
                 });
 
       </script>
-   </div>
+
    
 
 </body>

@@ -51,43 +51,52 @@
         </div>
     </div>
 
-    <div class="scroll_up">
+    <!-- <div class="scroll_up"> -->
+  <div class="scroll-space">
+       <!-- 下からフェードイン-->
+      <div class="fadein fadein-bottom">  
 
-        <div class="Banner1">
-          <h1>Banner</h1>
-          <div class="test">
-            <span class="portfolio-parts2">バナー</span>
+          <div class="Banner1">
+            <h1>Banner</h1>
+            <div class="test">
+              <span class="portfolio-parts2">バナー</span>
+            </div>
           </div>
-        </div>
 
 
-      <!-- 制作物01 Banner-->
-      <div class="Banner">
-        <img class="Banner-img" src="images/home-portfolio05.png" alt="制作物05">
-        <div class="Banner-mg">
-          <h3>05</h3>
-          <p class="pf1">PC版とスマホ版のサイト（コワーキングスペース）</p>
-          <p class="pf2">制作範囲 : デザイン</p> 
-          <p class="pf-mg1">
-            WEBデザインスクールの課題として、PC版とスマホ版のサイトの制作（模写）しました。<br>
-            PC版とスマホ版でレイアウトが異なるが、それぞれpixel単位で綺麗に揃えることを意識しながら制作を行いました。
-          </p>
-        </div>
-        <div class="Banner-full05">
-          <img src="images/pf-05.png" alt="制作物05">
-        </div> 
-      </div>
+          <!-- 制作物01 Banner-->
+          <div class="Banner">
+            <img class="Banner-img" src="images/home-portfolio05.png" alt="制作物05">
+            <div class="Banner-mg">
+              <h3>05</h3>
+              <p class="pf1">PC版とスマホ版のサイト（コワーキングスペース）</p>
+              <p class="pf2">制作範囲 : デザイン</p> 
+              <p class="pf-mg1">
+                WEBデザインスクールの課題として、PC版とスマホ版のサイトの制作（模写）しました。<br>
+                PC版とスマホ版でレイアウトが異なるが、それぞれpixel単位で綺麗に揃えることを意識しながら制作を行いました。
+              </p>
+            </div>
 
+            <div class="scroll-space">
+                <!-- 下からフェードイン-->
+              <div class="fadein fadein-bottom">  
+                  <div class="Banner-full05">
+                    <img src="images/pf-05.png" alt="制作物05">
+                  </div> 
+              </div>       
+            </div>
+          </div>
 
-        <div class="portfolio-btn">
-          <a href="index_portfolio_main.html" class="pf-btn2">back</a>
-        </div>
+            <div class="portfolio-btn">
+              <a href="index_portfolio_main.html" class="pf-btn2">back</a>
+            </div>
+
+      </div>       
+   </div>
 
         <!-- トップページボタンー-->
         <div id="pagetop"><a href="#" class="button_top">top</a></div>
         
-
-
         <!-- フッター-->
         <footer class="footer"> 
           <div class="foot-wrap">
@@ -142,25 +151,40 @@
               $("#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
           });
 
-        // <!-- フェードインでページ全体を表示させるトップページアニメーションのデモ -->
-            $(function() {
-            $('body').fadeIn(1000); //1秒かけてフェードイン！
-            });
+        // // <!-- フェードインでページ全体を表示させるトップページアニメーションのデモ -->
+        //     $(function() {
+        //     $('body').fadeIn(1000); //1秒かけてフェードイン！
+        //     });
 
-        // <!-- フェードインでスクロール -->
-            $(window).scroll(function () {
-              var scrollAnimationElm = document.querySelectorAll('.scroll_up');
-              var scrollAnimationFunc = function () {
-                for (var i = 0; i < scrollAnimationElm.length; i++) {
-                  var triggerMargin = 100;
-                  if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
-                    scrollAnimationElm[i].classList.add('on');
-                  }
-                }
-              }
-              window.addEventListener('load', scrollAnimationFunc);
-              window.addEventListener('scroll', scrollAnimationFunc);
-            });
+        // // <!-- フェードインでスクロール -->
+        //     $(window).scroll(function () {
+        //       var scrollAnimationElm = document.querySelectorAll('.scroll_up');
+        //       var scrollAnimationFunc = function () {
+        //         for (var i = 0; i < scrollAnimationElm.length; i++) {
+        //           var triggerMargin = 100;
+        //           if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+        //             scrollAnimationElm[i].classList.add('on');
+        //           }
+        //         }
+        //       }
+        //       window.addEventListener('load', scrollAnimationFunc);
+        //       window.addEventListener('scroll', scrollAnimationFunc);
+        //     });
+
+
+
+        // / <!--フェードイン->
+        $(window).scroll(function (){
+            $('.fadein').each(function(){
+                var elemPos = $(this).offset().top,
+                scroll = $(window).scrollTop(),
+                windowHeight = $(window).height();
+
+                    if (scroll > elemPos - windowHeight + 150){
+                        $(this).addClass('scrollin');
+                    }
+             });
+        });
 
         //  <!-- //トップページ -->
 
@@ -168,7 +192,7 @@
               var pagetop = $('#pagetop');   
               pagetop.hide();
               $(window).scroll(function () {
-                  if ($(this).scrollTop() > 100) {  
+                  if ($(this).scrollTop() > 500) {  
                       pagetop.fadeIn(); //100pxスクロールしたらフェードイン
                   } else {
                       pagetop.fadeOut();  //100pxスクロールしたらフェードアウト
@@ -183,7 +207,7 @@
               });
 
       </script>
-  </div>
+
 
   
 </body>
