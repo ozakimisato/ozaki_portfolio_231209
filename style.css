@@ -227,7 +227,7 @@ h1{
 .portfoliolist-top{
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
