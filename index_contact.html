@@ -107,8 +107,8 @@
               </div>
               <div class="modal__contents">
                 <div class="modal__content">
-                  <span class="modal__content2">送信されました。</span><br>
-                  お問い合わせ頂きありがとうございました。<br>後日ご連絡いたしますので、お待ちくださいませ。
+                  <span class="modal__content2">送信完了しました。</span><br>
+                  お問い合わせ頂きありがとうございます。<br>近日中にご連絡いたします。
                 </div>
               </div>
             </div>
@@ -175,23 +175,24 @@
 
         
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <!--ハンバーガーメニュー　自作のJS-->
-        <script>
-          $(".openbtn").click(function () {//ボタンがクリックされたら
-            $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
-            $("#g-nav").fadeToggle('200');//
-          });
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+      </script>
+            
 
-          $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
-              $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
-              $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去し
-              $("#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
-          });
-        </script>
+      <script>
 
-        <!-- //トップページ -->
-          <script>
+        // <!--ハンバーガーメニュー　自作のJS-->
+            $(".openbtn").click(function () {//ボタンがクリックされたら
+                $(this).toggleClass('active');//ボタン自身に activeクラスを付与し
+                $("#g-nav").fadeToggle('200');//
+            });
+
+              $("#g-nav a").click(function () {//ナビゲーションのリンクがクリックされたら
+                  $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
+                  $("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスを除去し
+                  $("#container").removeClass('mainblur');//ぼかしているエリアのmainblurクラスを除去
+              });
+
               $(function() {
               var pagetop = $('#pagetop');   
               pagetop.hide();
@@ -209,11 +210,10 @@
                   return false;
                 });
               });
-          </script>
 
+      </script>
 
-   
-
+  
 </body>
 
    

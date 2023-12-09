@@ -87,7 +87,6 @@ ul {
 @media screen and (max-width: 767px) {
     .header-bg{
         margin-bottom: 0px;
-
     }
 
 }
@@ -103,8 +102,8 @@ ul {
 @media screen and (max-width: 767px) {
     .header-bg img{
         width: 270px;
-        margin-top: 200px;
-        padding-bottom: 350px;
+        margin-top: 230px;
+        padding-bottom: 300px;
     }
 
 }
@@ -169,6 +168,11 @@ h1{
     }
 }
 
+.about-bot{
+    max-width: 1000px;
+    margin: -250px auto 220px
+}
+
 
 .ab-btn {
     border-radius:50%;
@@ -183,26 +187,26 @@ h1{
 	border: 1px solid #000333;
 	transition: .4s;
     font-family:'Noto Serif JP', serif; /*フォントの種類*/
-    /* position:relative;
-    top: -300px;
-    left: 1000px; */
+    margin-left: auto;
+
 
 }
 
 @media screen and (max-width: 767px) {
     .ab-btn{
-        margin: 0 auto;
+        margin: 300px auto 0px
 
     }
 
 }
 
-
-
 .ab-btn:hover {
 	background: #000333;
 	color: #fff;
 }
+
+
+
 
 /*制作物　*/
 .portfolio-top{
@@ -241,7 +245,7 @@ h1{
   
 .pf-top{
     margin: 0 auto;
-    padding: 30px;
+    /* padding: 30px; */
 }
 
 @media screen and (max-width: 767px) {
@@ -267,7 +271,8 @@ h1{
 
 /* 制作物　ボタン */
 .portfolio_btn-top{
-    margin-bottom: 100px;
+    max-width: 1000px;
+    margin: 50px auto 220px;
 }
 
 .por_btn-top {
@@ -283,8 +288,7 @@ h1{
 	border: 1px solid #000333;
 	transition: .4s;
     font-family:'Noto Serif JP', serif; /*フォントの種類*/
-    /* position:relative;
-    left: 1100px; */
+    margin-left: auto;
 
 }
 
@@ -360,16 +364,21 @@ h1{
 	transition: .4s ease-in-out;
 }
  
-.con_btn-top img:nth-of-type(2) {
-	opacity: 0;
+.con_btn-top img:nth-of-type(1) {
+    opacity: 0;
 }
 
+.con_btn-top img:nth-of-type(2) {
+    opacity: 1;
+}
+
+/* hoverで1つ目の画像を出す　2つ目は透明にする */
 .con_btn-top:hover img:nth-of-type(1) {
-	opacity: 1;
+    opacity: 1;
 }
 
 .con_btn-top:hover img:nth-of-type(2) {
-	opacity: 0;
+    opacity: 0;
 }
 
 
@@ -773,6 +782,13 @@ h3{
   border: 1px solid #999AAD;
   max-width: 300px;
 }
+
+/*制作物画像のホバー*/
+.pf img:hover{ 
+	opacity:0.5;
+	transition:0.3s;
+}
+
 
 .pf-btn {
   border-radius:50%;
@@ -1233,11 +1249,12 @@ h3{
     padding-top: 20px;
     padding-bottom: 20px;
     display: block;
-    color: #000333;
-    border: 1px solid #000333;
+    color: #000333; 
+    border: 1px solid #000333; 
     transition: .4s;
     font-size: 14px; /*フォントサイズ*/
     font-family:'Noto Serif JP', serif; /*フォントの種類*/
+
 }
   
   
@@ -1252,11 +1269,13 @@ h3{
         padding-top: 8px;
         padding-bottom: 8px;
         font-size: 16px;
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: #eee;
+        color: #000333;
 
     }
 }
-  
-
 
 /*   モーダルウィンドウ  */
 .layer {
@@ -1327,15 +1346,21 @@ h3{
   
 .modal {
     position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    width: 80%;
-    min-width: 440px;
+    margin: 0 auto;
+    width: 700px;
+    max-width: 100%;
     opacity: 0;
     visibility: hidden;
     transition:  visibility .7s linear, opacity .7s linear;
 }
-  
+
+@media screen and (max-width: 767px) {
+    .modal {
+        width: 330px;
+    }
+}
+
+
   
 .modal__inner {
     margin-top: 125px;
@@ -1353,15 +1378,8 @@ h3{
 
 }
 
-/* @media screen and (max-width: 767px) {
-    .modal__inner{
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-}
- */
 
-  
+
 .modal__content {
     padding-top: 15px;
     padding-bottom: 23px;
@@ -1369,8 +1387,20 @@ h3{
     font-family: "游明朝", YuMincho; /*フォントの種類*/
     color: #000333;
     font-family: sans-serif;
+    margin: 40px;
+    max-width: 700px;
+    margin:0 auto;
     
 }
+
+
+/* @media screen and (max-width: 767px) {
+    .modal__contents{
+        max-width: 700px;
+        margin:0 auto;
+    }
+} */
+
 
 .modal__content2{
     font-size:22px;
@@ -1521,7 +1551,7 @@ h3{
 
 .foot li:hover{
     color: #696A87;
-  }
+}
 
 .copyright p{
     color: #fff; /*フォント色*/
@@ -1632,8 +1662,6 @@ h3{
 .coveranime {
     transform: scaleY(0);
 }
-
-
 
 /*========= 画面遷移のためのCSS ===============*/
 
